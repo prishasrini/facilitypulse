@@ -1,0 +1,15 @@
+{
+  "name": "facilitypulse",
+  "private": true,
+  "description": "Live building sensor monitoring dashboard — React + TypeScript UI, Express + TypeScript API",
+  "scripts": {
+    "install:all": "npm install --prefix server && npm install --prefix client",
+    "dev": "concurrently -n api,ui -c blue,magenta \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "test": "npm test --prefix server && npm test --prefix client",
+    "typecheck": "npm run typecheck --prefix server && npm run typecheck --prefix client",
+    "build": "npm run build --prefix server && npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
